@@ -24,10 +24,18 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Build with Astro
         run: yarn build
-      - name: Upload to CDN
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
-        with:
-          server: ny.storage.bunnycdn.com
-          username: ${{ secrets.BUNNY_STORAGE_FTP_USERNAME }}
-          password: ${{ secrets.BUNNY_STORAGE_FTP_PASSWORD }}
-          local-dir: ./dist/
+      - name: Deploy to B2 Storage
+        uses: jakejarvis/backblaze-b2-action@master
+        env:
+          SOURCE_DIR: './dist'
+          B2_BUCKET: ${{ secrets.B2_BUCKET }}
+          B2_APPKEY_ID: ${{ secrets.B2_APPKEY_ID }}
+          B2_APPKEY: ${{ secrets.B2_APPKEY }}
+      # - name: Upload to CDN
+      #   uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      #   with:
+      #     server: ny.storage.bunnycdn.com
+      #     username: ${{ secrets.BUNNY_STORAGE_FTP_USERNAME }}
+      #     password: ${{ secrets.BUNNY_STORAGE_FTP_PASSWORD }}
+      #     local-dir: ./dist/
+
