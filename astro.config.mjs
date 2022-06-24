@@ -8,7 +8,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://obrignoni.github.io',
+	site: 'https://obrignoni.b-cdn.net',
 	integrations: [
 		preact(),
 		react(),

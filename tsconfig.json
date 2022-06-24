@@ -10,18 +10,20 @@
     // Enable stricter transpilation for better output.
     "isolatedModules": true,
     // Add type definitions for our Vite runtime.
-    "types": ["vite/client"],
-	"baseUrl": ".",
-	"paths": {
-		"@components/*": [
-			"src/components/*.astro"
-		],
-		"@layouts/*": [
-			"src/components/layouts/*.astro"
-		],
-		"@data/*": [
-			"src/data/*.ts"
-		]
-	}
+    "types": [
+      "vite/client"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": [
+        "src/components/*.astro"
+      ],
+      "@layouts/*": [
+        "src/components/layouts/*.astro"
+      ],
+      "@data/*": [
+        "src/data/*.ts"
+      ]
+    }
   }
 }
