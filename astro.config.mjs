@@ -8,5 +8,11 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [preact(), react(), tailwind(), partytown(), sitemap()]
+	integrations: [
+		preact(),
+		react(),
+		tailwind(),
+		// partytown(), 
+		sitemap(),
+	]
 });
