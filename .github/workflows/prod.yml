@@ -27,6 +27,8 @@ jobs:
       - name: 📂 Upload to CDN
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
+          protocol: ftp
+          port: 21
           server: ny.storage.bunnycdn.com
           username: ${{ secrets.BUNNY_STORAGE_FTP_USERNAME }}
           password: ${{ secrets.BUNNY_STORAGE_FTP_PASSWORD }}
