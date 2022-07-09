@@ -1,14 +1,13 @@
 ---
-setup: |
-    import ImageQuote from '@components/ImageQuote';
-
 title: New blog built with Astro
-date: 2022-06-05
+date: 2022-07-01
 draft: false
 tags:
   - Astro
   - Web Development
   - JavaScript
+setup: |
+import ImageQuote from '@components/ImageQuote';
 ---
 
 > The best time to plant a tree is twenty years ago. The second best time is now.
