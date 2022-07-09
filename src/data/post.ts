@@ -1,3 +1,4 @@
+import readingTime from 'reading-time';
 type MarkdownInstance = import('astro').MarkdownInstance<any>;
 // Which mode is the environment running in? https://vitejs.dev/guide/env-and-mode.html#intellisense-for-typescript
 const { MODE } = import.meta.env;
@@ -10,16 +11,23 @@ export type Post = {
 	draft: boolean,
 	date: string,
 	file: URL,
+	rawContent: string,
+	readingTime: string,
+	tags: string[],
 }
 
 export function single(post: MarkdownInstance): Post {
 	const slug = post.file.split('/').reverse()[0].replace('.md', '');
+	const rawContent = post.rawContent();
 	return {
 		...post.frontmatter,
 		Content: post.Content,
 		slug: slug,
 		draft: post.file.split('/').reverse()[1] === 'drafts',
-		timestamp: (new Date(post.frontmatter.date)).valueOf()
+		timestamp: (new Date(post.frontmatter.date)).valueOf(),
+		rawContent,
+		readingTime: readingTime(rawContent).text,
+		tags: post.frontmatter.tags || [],
 	}
 }
 

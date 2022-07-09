@@ -2,6 +2,7 @@
   "name": "@obrignoni/blog",
   "version": "0.0.1",
   "private": true,
+  "type": "commonjs",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -20,7 +21,11 @@
   },
   "dependencies": {
     "@astrojs/rss": "^0.2.0",
+    "node-fetch": "2.6.6",
     "preact": "^10.7.3",
+    "react-icons": "^4.4.0",
+    "reading-time": "^1.5.0",
+    "remark-kroki-plugin": "^0.1.1",
     "sass": "^1.53.0"
   }
 }

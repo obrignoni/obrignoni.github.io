@@ -1,0 +1,39 @@
+---
+	import Date from "@components/utilities/Date";
+	import type { Post } from '@data/post';
+	const post: Post = Astro.props.post
+	const showTags: boolean = Astro.props.showTags
+
+---
+
+<div class="post-info">
+    <Date date={post.date} />
+    <span class="dot">•</span>
+    <span class="reading-time">{post.readingTime}</span>
+    <!-- {showTags && post.tags.length > 0 && (
+        <>
+            <span class="dot">•</span>
+            {post.tags.map((tag: any) => (
+                <a class="tag" href={`/articles/${tag}`}>#{tag}</a>
+            ))}
+        </>
+    )} -->
+</div>
+
+<style lang="css">
+    .post-info {
+        font-size: 14px;
+        color: #777 !important;
+    }
+    .dot {
+        position: relative;
+        top: -2px;
+        font-size: 8px;
+        font-weight: 400;
+        padding: 5px;
+    }
+    .tag {
+        padding-right: 5px;
+        color: #777 !important;
+    }
+</style>

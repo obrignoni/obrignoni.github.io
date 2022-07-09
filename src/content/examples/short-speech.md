@@ -1,5 +1,5 @@
 ---
-title: You know the business and I know the chemistry
+# title: You know the business and I know the chemistry
 date: 2022-03-08
 preview: No speeches. Short speech. You lost your partner today. What's his name - Emilio? Emilio is going to prison. The DEA took all your money, your lab. You got nothing.
 draft: true

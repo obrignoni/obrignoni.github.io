@@ -1,7 +1,14 @@
 ---
 	const {date} = Astro.props;
-
-	const options = { year: 'numeric', month: 'long', day: 'numeric' };
+	const options = { year: 'numeric', month: 'short', day: 'numeric' } as Intl.DateTimeFormatOptions;
 	const formattedDate = new Intl.DateTimeFormat('en-US', options).format(Date.parse(date))
 ---
-<time datetime={date}>{formattedDate}</time>
+<time datetime={date}>
+	{formattedDate}
+</time>
+
+<style>
+	time {
+		font-size: 14px;
+	}
+</style>

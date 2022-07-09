@@ -1,5 +1,5 @@
 ---
-title: Gus has cameras
+# title: Gus has cameras
 date: 2022-03-07
 preview: Listen to yourself! No, he has known everything, all along. Where were you today? In the lab? And you don't think it's possible that Tyrus lifted the cigarette out of your locker?
 draft: true

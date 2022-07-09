@@ -1,15 +1,38 @@
 ---
 import { published } from "@data/post"
 import BlogLayout from "@layouts/BlogLayout";
-import Preview from "@components/blog/preview";
+import PostPreview from "@components/blog/PostPreview";
 
 const markdownFiles = await Astro.glob('../content/**/*.md')
-const posts = published( markdownFiles );
+const posts = published(markdownFiles);
 ---
 
 <BlogLayout title="O. Brignoni">
-	<div class="content container">
-		<div>Coming soon.</div>
-		<!-- {posts.map((p) => <Preview post={p} />)} -->
-	</div>
+    <div class="content container">
+
+        <div class="hero">
+            <h1>Thoughts, books & programming.</h1>
+        </div>
+
+        <div class="recent-posts">
+            <label>Recent</label>
+            <div class="post-previews">
+                {posts.map((p) =>(
+                    <PostPreview post={p} />
+                ))}
+            </div>
+        </div>
+    </div>
 </BlogLayout>
+
+<style>
+    .hero {
+        padding-top: 40px;
+        padding-bottom: 80px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 20px;
+    }
+</style>

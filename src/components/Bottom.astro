@@ -1,18 +1,26 @@
+---
+import Social from "./Social.astro";
+---
+
 <div class="bottom">
-	&copy; O. Brignoni {(new Date()).getFullYear()}
+    <div class="container">
+        <div class="row">
+            <div class="copyright col-xs-6 col-sm-6">&copy; {(new Date()).getFullYear()} O. Brignoni</div>
+            <div class="social col-xs-6 col-sm-6">
+                <div class="row end-xs">
+                    <div class="col-xs">
+                        <Social />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <style>
-	.bottom {
-		background-color: var( --background-color-alt );
-		padding: 20px 5vw;
-		text-align: center;
-		font-size: .85rem;
-	}
-	
-	a { 
-		font-weight: bold;
-		color: var( --text-color-alt );
-		text-decoration: none;
-	}
+    .bottom {
+        background-color: var( --background-color-alt );
+        padding: 40px 0;
+        font-size: 18px;
+    }
 </style>

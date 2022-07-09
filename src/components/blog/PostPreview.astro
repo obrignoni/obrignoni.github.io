@@ -1,0 +1,20 @@
+---
+	import PostInfo from "@components/blog/PostInfo";
+	import type { Post } from '@data/post';
+	const post: Post = Astro.props.post
+---
+
+<div class="post-preview">
+	<h3><a href={`/${post.slug}`}>{post.title}</a></h3>
+	<PostInfo post={post} />
+</div>
+
+<style lang="css">
+	.post-preview {
+		margin-bottom: 20px;
+	}
+	h3 {
+		margin: 0;
+		padding: 0;
+	}
+</style>

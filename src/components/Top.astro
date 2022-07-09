@@ -1,6 +1,23 @@
+---
+import Logo from "./Logo.astro";
+import Social from "./Social.astro";
+---
+
 <div class="top">
-	<div class="logo container">
-		<a href="/">O. Brignoni</a>
+	<div class="container">
+		<div class="row">
+            <div class="copyright col-xs-12 col-sm-6"><Logo /></div>
+            <div class="social col-xs-12 col-sm-6">
+                <div class="row start-xs end-sm">
+                    <div class="col-xs">
+						<Social>
+							<!-- <a href="/articles">Articles</a>
+							<a href="/projects">Projects</a> -->
+						</Social>
+                    </div>
+                </div>
+            </div>
+        </div>
 	</div>
 </div>
 
@@ -8,16 +25,16 @@
 	.top {
 		background-color: var( --background-color-alt );
 		margin-bottom: 20px;
+		padding: 40px 0;
 	}
 
-	.logo { 
-		padding: 60px 0;
+	a {
+		color: #777;
+		padding: 0px 8px;
+		font-size: 16px;
 	}
-	
-	a { 
-		font-size: 1.4rem;
-		font-weight: bold;
-		color: var( --text-color-alt );
-		text-decoration: none;
+
+	a:hover {
+		color: black;
 	}
 </style>
