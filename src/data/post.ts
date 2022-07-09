@@ -13,7 +13,7 @@ export type Post = {
 	file: URL,
 	rawContent: string,
 	readingTime: string,
-	tags: string[],
+	tags: string[]
 }
 
 export function single(post: MarkdownInstance): Post {
@@ -35,7 +35,7 @@ export function published(posts: MarkdownInstance[]): Post[] {
 	return posts
 		.filter(post => post.frontmatter.title )
 		.map(post => single(post))
-		.filter(post => MODE === 'development' || !post.draft)
+		.filter(post => MODE === 'development' || post.draft !== true)
 		.sort((a, b) => b.timestamp - a.timestamp)
 }
 
