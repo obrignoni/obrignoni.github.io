@@ -33,9 +33,9 @@ export function single(post: MarkdownInstance): Post {
 
 export function published(posts: MarkdownInstance[]): Post[] {
 	return posts
-		.filter(post => post.frontmatter.title )
+		.filter(post => post.frontmatter.title)
 		.map(post => single(post))
-		.filter(post => MODE === 'development' || post.draft !== true)
+		.filter(post => MODE === 'development' || !post.draft)
 		.sort((a, b) => b.timestamp - a.timestamp)
 }
 

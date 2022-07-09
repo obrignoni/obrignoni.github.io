@@ -1,7 +1,6 @@
 ---
 title: New blog built with Astro
 date: 2022-07-01
-draft: false
 tags:
   - Astro
   - Web Development
