@@ -7,7 +7,7 @@ tags:
   - Web Development
   - JavaScript
 setup: |
-import ImageQuote from '@components/ImageQuote';
+  import ImageQuote from '@components/ImageQuote';
 ---
 
 > The best time to plant a tree is twenty years ago. The second best time is now.
@@ -108,7 +108,8 @@ Import a component and use it in a markdown file.
 
 ```astro
 ---
-setup: | import ImageQuote from '@components/ImageQuote';
+setup: | 
+  import ImageQuote from '@components/ImageQuote';
 ---
 
 ## Why I chose Astro
