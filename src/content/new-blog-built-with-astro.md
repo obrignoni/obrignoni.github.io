@@ -63,7 +63,7 @@ blockdiag {
     ~ astro.build
 </ImageQuote>
 
-We live in a time were there are so many great options. I considered some of the well known tools like Jekyll, Hugo, Next.js. I recently became aware of Astro and I decided to go with it for the following reasons.
+There are so many great options. I considered some of the well known tools like Jekyll, Hugo, Next.js. I recently became aware of Astro and I decided to go with it for the following reasons.
 
 ### 1. Use JavaScript. Ship with less of it.
 
